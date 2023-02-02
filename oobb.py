@@ -20,8 +20,8 @@ def make_pl(width,height,depth=3):
         y = height_mm/2 + os_minus/2
         objects.append(opsc.opsc_easy("positive", "rounded_rectangle", size=[width_mm, height_mm, depth_mm], pos=[x,y,0]))
         objects.extend(opsc.opsc_easy_array("negative", "hole", repeats=[width,height], pos_start = [os/2,os/2], shift_arr = [os,os], r=os_hole ))
-        type = "PL"
-        opsc.opsc_make_object('parts/' + type + '/' + type + "-" + str(width).zfill(2) + "-" + str(height).zfill(2) + "-" + str(depth).zfill(2) + "/" + mode + ".scad", objects, mode=mode,save_type=oobb_save_type)
+        type = "pl"
+        opsc.opsc_make_object('parts/' + type + "_" + str(width).zfill(2) + "_" + str(height).zfill(2) + "_" + str(depth).zfill(2) + "/" + mode + ".scad", objects, mode=mode,save_type=oobb_save_type)
 
 
 
